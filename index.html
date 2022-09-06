@@ -23,6 +23,12 @@ function openForm() {
 }
 </script>
 
+<script>
+function sendAlert() {
+    alert("You added an item to your cart!");
+}
+</script>
+
 </head>
 <body>
 
@@ -32,30 +38,170 @@ function openForm() {
             <li class="item"><a href="#">Home</a></li>
             <li class="item"><a href="#">About</a></li>
             <li class="item"><a href="#">Services</a></li>
-            <li class="item button"><a href="#">Log In</a></li>
-            <li class="item button secondary"><a href="#">Sign Up</a></li>
+            <li class="item"><a href="http://localhost:63342/MattressKingdom/game.html?_ijt=a1aaiomr7hr3dkvlmv63eptq0c&_ij_reload">Game</a></li>
+            <li class="item button" onclick="openLogin()"><a href="#">Log In</a></li>
+            <li class="item button secondary" onclick="openLogin()"><a href="#">Sign Up</a></li>
             <li class="toggle"><span class="bars"></span></li>
         </ul>
     </nav>
 
     <div class="item-container">
         <div class="img">
-            <img src="images/mattress_1.png" alt="First Mattress" width="400" height="400">
+            <img src="images/mattress_1.png" alt="Mattress 1" width="400" height="400">
         </div>
         <div class="info-box">
             <div class="price">
                 <h3>$69,000</h3>
             </div>
             <div class="name">
-                <h3>This mattress is MEGA FIRM</h3>
+                <h3>Queen Mattress</h3>
             </div>
-            <div class="price">
-
+            <div class="firmness">
+                <h4>- Firmness: (6/10)</h4>
             </div>
+            <div class="rating">
+                <h4>- Rating: 2 Stars</h4>
+            </div>
+            <button class="add-to-cart" onclick="sendAlert()">
+                <a href="#">
+                    <img src="images/cart.png" alt="Cart" width="50" height="50">
+                </a>
+            </button>
         </div>
     </div>
 
+     <div class="item-container-2">
+        <div class="img">
+            <img src="images/mattress_2.png" alt="Mattress 2" width="400" height="400">
+        </div>
+        <div class="info-box">
+            <div class="price">
+                <h3>$21,000</h3>
+            </div>
+            <div class="name">
+                <h3>Kings Mattress</h3>
+            </div>
+            <div class="firmness">
+                <h4>- Firmness: (3/10)</h4>
+            </div>
+            <div class="rating">
+                <h4>- Rating: 3 Stars</h4>
+            </div>
+            <button class="add-to-cart" onclick="sendAlert()">
+                <a href="#">
+                    <img src="images/cart.png" alt="Cart" width="50" height="50">
+                </a>
+            </button>
+        </div>
+    </div>
+
+    <div class="item-container-3">
+        <div class="img">
+            <img src="images/mattress_3.png" alt="Mattress 3" width="400" height="400">
+        </div>
+        <div class="info-box">
+            <div class="price">
+                <h3>$666,000</h3>
+            </div>
+            <div class="name">
+                <h3>Devil's Mattress</h3>
+            </div>
+            <div class="firmness">
+                <h4>- Firmness: (2/10)</h4>
+            </div>
+            <div class="rating">
+                <h4>- Rating: 1 Stars</h4>
+            </div>
+            <button class="add-to-cart" onclick="sendAlert()">
+                <a href="#">
+                    <img src="images/cart.png" alt="Cart" width="50" height="50">
+                </a>
+            </button>
+        </div>
+    </div>
+
+    <div class="best-selling">
+        <h1>Best Selling</h1>
+    </div>
+
+    <div class="item-container-4">
+        <div class="img">
+            <img src="images/mattress_bs.png" alt="Best Selling Mattress" width="50%" height="600">
+        </div>
+        <div class="info-box">
+            <div class="price">
+                <h2>$132,232,562,100.01</h2>
+            </div>
+            <div class="name">
+                <h2>GOD'S MATTRESS</h2>
+            </div>
+            <div class="firmness">
+                <h3>- Firmness: (10/10) MEGA FIRM</h3>
+            </div>
+            <div class="rating">
+                <h3>- Rating: 5 Stars</h3>
+            </div>
+            <button class="add-to-cart" onclick="sendAlert()">
+                <a href="#">
+                    <img src="images/cart.png" alt="First Mattress" width="50" height="50">
+                </a>
+            </button>
+        </div>
+    </div>
 </body>
+
+
+<div class="container" id="login-container">
+        <form class="form" id="login">
+            <h1 class="form__title">Login</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Username or email">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a href="#" class="form__link">Forgot your password?</a>
+            </p>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+        </form>
+        <form class="form form--hidden" id="createAccount">
+            <h1 class="form__title">Create Account</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Email Address">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+            </p>
+        </form>
+    </div>
+
+<script>
+function openLogin() {
+    document.getElementById("login-container").style.display = "block";
+}
+</script>
 
 <footer class="footer">
 
